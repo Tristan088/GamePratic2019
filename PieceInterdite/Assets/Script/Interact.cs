@@ -15,7 +15,9 @@ public class Interact : MonoBehaviour
     //Layer des objects intéragibles
     public LayerMask mask;
 
-
+    public GameObject eye;
+    private RaycastHit hit2;
+    private Ray ray2;
     // Start is called before the first frame update
 
 
@@ -26,12 +28,27 @@ public class Interact : MonoBehaviour
     {
 
         //Si on clique Gauche
-        if(Input.GetMouseButtonDown(0))
+        if(ObjectInRange())
         {
-            if(ObjectInRange())
+            eye.SetActive(true);
+            if(Input.GetMouseButtonDown(0))
             {
                 //on lance la fonction d'interaction de l'objet
                 hit.collider.gameObject.GetComponent<InteractableMother>().Activate();
+            }
+        }
+        else
+        {
+            eye.SetActive(false);
+        }
+
+        ray2 = new Ray(transform.position, transform.forward);
+        if( Physics.Raycast(ray2, out hit2))
+        {
+            Debug.Log("Allo");
+            if(hit2.collider.gameObject.name == "code")
+            {
+                hit2.collider.gameObject.GetComponent<InteractableMother>().Activate();
             }
         }
     }

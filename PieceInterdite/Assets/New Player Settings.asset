@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HaveKeyBarder: 0
   HaveFinalKey: 0
+  HaveCode: 1
