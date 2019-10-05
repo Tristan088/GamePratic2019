@@ -40,6 +40,6 @@ public class Movement : MonoBehaviour
         }
 
         direction.Normalize();
-        rb.velocity = direction * speed;
+        rb.velocity = direction * speed * Time.deltaTime;
     }
 }
