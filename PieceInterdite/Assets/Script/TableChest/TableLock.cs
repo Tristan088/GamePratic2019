@@ -18,7 +18,13 @@ public class TableLock : InteractableMother
     {
         if(PlayerSettings.Instance.HaveCode)
         {
-            
+            //Ouverture Etagère
+            GetText(TextSettings.Instance.textOpenTableLock);
+            Destroy(gameObject);
+        }
+        else
+        {
+            GetText(TextSettings.Instance.textTableLockCodeMissing);
         }
     }
 }
