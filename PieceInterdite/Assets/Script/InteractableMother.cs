@@ -8,9 +8,12 @@ using UnityEngine;
 public abstract  class  InteractableMother : MonoBehaviour
 {
 
+    private GameObject text_box;
+
     private void Start()
     {
         gameObject.layer = 9;
+        text_box = GameObject.Find("TextBox");
     }
 
     //Fonction virtual qui sera redéfinie dans chaque sous classe des différents objets. C'est elle qui sera appelé et effectura les effets des objets.
@@ -19,9 +22,9 @@ public abstract  class  InteractableMother : MonoBehaviour
 
     //Fonction qui permet de retourner un text pour la fonction d'affichage de text. Les text doivent être paramétré dans  TextSettings et passer en paramètre de la manière suivante :
     //TextSettings.Intstance.*nom_de_la_varibale_text*
-    public  string GetText(string myText)
+    public  void GetText(string myText)
     {
-        return myText;
+        text_box.GetComponent<Text_Box>().DrawText(myText);
     }
    
 }

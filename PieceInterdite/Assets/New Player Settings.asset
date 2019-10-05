@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: AllText
-  m_EditorClassIdentifier: Assembly-CSharp::TextSettings
-  textChaise: vbcb
+  m_Script: {fileID: 11500000, guid: ddb9935790fba324f9c015a98d33dfac, type: 3}
+  m_Name: New Player Settings
+  m_EditorClassIdentifier: 
+  HaveKeyBarder: 0
+  HaveFinalKey: 0

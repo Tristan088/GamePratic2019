@@ -14,18 +14,21 @@ public class TableChestLock : InteractableMother
     {
         if (PlayerSettings.Instance.HaveKeyBarder)
         {
-            if (isTheGoodOne)
+            if (isTheGoodOne )
             {
+                
                 PlayerSettings.Instance.EventTableChestUnlock();
+                GetText(TextSettings.Instance.textGetFinalKey);
             }
             else
             {
-                //DrawText(TextSettings.instance.textTableChestWrong
+                
+                GetText(TextSettings.Instance.textTableChestWrong);
             }
         }
         else
         {
-            //DrawText Dont Have KeyBarber
+            GetText(TextSettings.Instance.textTableChestKeyMissing);
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-[CreateAssetMenu(menuName = "Settings/World")]
+[CreateAssetMenu(menuName = "Settings/Player")]
 public class PlayerSettings : SingletonSettings<PlayerSettings>
 {
     //Ce scriptableObject contiendra tout les booleen sur l'avancement des énigmes du player
@@ -12,7 +13,17 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public bool HaveFinalKey = false;
 
+    public bool HaveCode = false;
 
+
+    private void OnEnable()
+    {
+        HaveFinalKey = false;
+        HaveKeyBarder = false;
+        HaveCode = false;
+    }
+    
+    
 
 
 
@@ -21,8 +32,12 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public void EventTableChestUnlock()
     {
-        HaveFinalKey = true;
-        //DrawText
+        if (!PlayerSettings.Instance.HaveFinalKey)
+        {
+            HaveFinalKey = true;
+        }
+       
+       
     }
 
     public void EventFinishGame()

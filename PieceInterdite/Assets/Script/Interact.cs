@@ -7,7 +7,7 @@ public class Interact : MonoBehaviour
 
 
     //Distance d'intéraction du joueur
-    public int range;
+    public float range;
    //Ray du raycast pour la detection de l'objet
     private Ray ray;
     //information sur l'objet touché par le raycast

@@ -12,24 +12,11 @@ public class Text_Box : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            //DialogueCanvas.alpha = 1;
-            DrawText("helloworld");
-        }
-           // if (Input.GetKeyDown(KeyCode.Space))
-        //{
-           // DialogueCanvas.alpha = 0; 
-        //}
-
         UndrawText();
     }
 
@@ -46,7 +33,7 @@ public class Text_Box : MonoBehaviour
     {
         if (DialogueCanvas.alpha>=0)
         {
-            DialogueCanvas.alpha -= 0.2f * Time.deltaTime;
+            DialogueCanvas.alpha -= 0.1f * Time.deltaTime;
 
         }
     }
