@@ -7,7 +7,11 @@ using UnityEngine;
 //CLasse mère des object intéractibles
 public abstract  class  InteractableMother : MonoBehaviour
 {
-    
+
+    private void Start()
+    {
+        gameObject.layer = 9;
+    }
 
     //Fonction virtual qui sera redéfinie dans chaque sous classe des différents objets. C'est elle qui sera appelé et effectura les effets des objets.
     public virtual void Activate() { }

@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 223555066}
   - component: {fileID: 223555065}
   - component: {fileID: 223555070}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: ChaiseBarbier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 223555064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9151f1f09504d3841945a4eee90da5a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 285f0e22bcdccea40b4ae657f0546bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &534669902

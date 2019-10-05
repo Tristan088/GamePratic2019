@@ -10,6 +10,24 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public bool HaveKeyBarder = false;
 
+    public bool HaveFinalKey = false;
 
+
+
+
+
+
+
+
+    public void EventTableChestUnlock()
+    {
+        HaveFinalKey = true;
+        //DrawText
+    }
+
+    public void EventFinishGame()
+    {
+        Debug.Log("GG");
+    }
 
 }
