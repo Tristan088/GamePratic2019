@@ -36,8 +36,9 @@ public class EndMannager : MonoBehaviour
 
     public void Retry()
     {
-         
+        PlayerSettings.Instance.ResetPlayer();
         SceneManager.LoadScene(0);
+
     }
    
 }

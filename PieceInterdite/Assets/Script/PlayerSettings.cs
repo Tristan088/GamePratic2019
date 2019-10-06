@@ -29,6 +29,11 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     private void OnEnable()
     {
+        ResetPlayer();
+    }
+
+    public void ResetPlayer()
+    {
         timerOn = false;
         timer = 300;
         HaveFinalKey = false;

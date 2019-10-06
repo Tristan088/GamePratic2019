@@ -1,29 +1,34 @@
 fileFormatVersion: 2
-guid: 826af982d53f7594e9d01ed940c526e8
+guid: ad6f7eb2228e57846a8e81dddc489d32
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Door1
-    2100002: Roche
-    2100004: lambert1
-    2100006: Planches
-    2100008: Around_Door1
+    2100000: lambert1
+    2100002: IronRealiste
+    2100004: Rust_Iron
+    2100006: Bois
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Room
+    4300000: pTorus3
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Around_Door1
-    second: {fileID: 2100000, guid: 7d2a469151a14b048b37fa2580cc9476, type: 2}
+      name: Bois
+    second: {fileID: 2100000, guid: 7c20e064ba9f62f479b59a9adf25e072, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Door1
-    second: {fileID: 2100000, guid: 3746e0b296450de4095e3e12d8d45a59, type: 2}
+      name: IronRealiste
+    second: {fileID: 2100000, guid: b38934ddc754b034ab967dd627659b34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rust_Iron
+    second: {fileID: 2100000, guid: 066ef8c6f13fc2344bf382871fc32993, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -63,7 +68,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
