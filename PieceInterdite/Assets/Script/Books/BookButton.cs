@@ -10,17 +10,22 @@ public class BookButton : InteractableMother
     public  GameObject newTableau;
     public GameObject[] allBook;
     public GameObject textCode;
+    public AudioSource _audio;
 
 
 
     public int order;
     // Start is called before the first frame update
-
+    public void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
 
     public override void Activate()
     {
+        _audio.Play();
         PlayerSettings.Instance.EventBook(order);
         if(PlayerSettings.Instance.bookCount == 0)
         {

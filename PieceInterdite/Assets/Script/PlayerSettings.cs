@@ -46,22 +46,24 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
     public void EventBook(int n)
     {
         bookCount++;
-        if(bookCount == 4)
+        if (bookCount != n)
         {
-            if(bookValide)
+            bookValide = false;
+        }
+       
+        
+        if (bookCount == 4)
+        {
+            if (bookValide)
             {
-                
+
             }
             else
             {
                 bookCount = 0;
                 bookValide = true;
-                
+
             }
-        }
-        else if (bookCount != n)
-        {
-            bookValide = false;
         }
         return;
 
@@ -80,7 +82,7 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public void EventFinishGame()
     {
-        Debug.Log("GG");
+        SceneManager.LoadScene(1);
     }
 
 }

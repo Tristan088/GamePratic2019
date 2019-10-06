@@ -14,9 +14,11 @@ public class Levier : InteractableMother
 
     public override void Activate()
     {
+
         GetComponent<Collider>().enabled = false;
         aFaireApparaitre.SetActive(true);
         aFaireDisparaitre.SetActive(false);
+        PlayerSettings.Instance.timerOn = true;
         _audio.Play();
         rotate = true;
         GetText(TextSettings.Instance.textLevier);
@@ -26,9 +28,9 @@ public class Levier : InteractableMother
 
     private void Update()
     {
-        if(rotate && (transform.rotation.eulerAngles.x >= 271 || transform.rotation.eulerAngles.x == 0))
+        if(rotate && (transform.rotation.eulerAngles.x <= 70 || transform.rotation.eulerAngles.x == 0))
         {
-            transform.Rotate(Vector3.right, speed * Time.deltaTime);
+            transform.Rotate(Vector3.right, -speed * Time.deltaTime);
 
         }
     }
