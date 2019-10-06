@@ -45,7 +45,7 @@ public class Interact : MonoBehaviour
         ray2 = new Ray(transform.position, transform.forward);
         if( Physics.Raycast(ray2, out hit2))
         {
-            Debug.Log("Allo");
+            
             if(hit2.collider.gameObject.name == "code")
             {
                 hit2.collider.gameObject.GetComponent<InteractableMother>().Activate();

@@ -15,3 +15,5 @@ MonoBehaviour:
   HaveKeyBarder: 0
   HaveFinalKey: 0
   HaveCode: 1
+  bookCount: 4
+  bookValide: 1

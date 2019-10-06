@@ -6,12 +6,14 @@ public class TopDesk : MonoBehaviour
 {
 
     public bool isOpen = false;
+    public bool play = true;
     public float speedRotate;
-
+    public AudioSource _audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audio = gameObject.GetComponent < AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -24,6 +26,11 @@ public class TopDesk : MonoBehaviour
         if (isOpen && ( transform.rotation.eulerAngles.x >= 271 || transform.rotation.eulerAngles.x==0))
         {
           transform.Rotate(-speedRotate*Time.deltaTime, 0f, 0f);
+            if(play)
+            {
+                play = false;
+                _audio.Play();
+            }
         }
 
         

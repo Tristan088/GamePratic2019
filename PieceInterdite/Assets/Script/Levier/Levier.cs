@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : InteractableMother
+public class Levier : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Start()
+    void Start()
     {
         
     }
@@ -15,9 +15,4 @@ public class Interactable : InteractableMother
     {
         
     }
-
-    public override void  Activate()
-    {
-        Debug.Log("Je Fait Mon Effet");
-    } 
 }
