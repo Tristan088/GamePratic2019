@@ -32,10 +32,7 @@ public class Timer : MonoBehaviour
                 PlayerSettings.Instance.timer -= Time.deltaTime;
 
 
-            if (PlayerSettings.Instance.timer < 0)
-            {
-                SceneManager.LoadScene(1);
-            }
+            
         }
     }
 }
