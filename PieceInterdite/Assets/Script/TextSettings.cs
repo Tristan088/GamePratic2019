@@ -14,6 +14,7 @@ public class TextSettings : SingletonSettings<TextSettings>
     
 
     public string textFinalDoorLock = "C'est fermé je ne peux pas m'échapper";
+    public string textLevier = "Qu'est ce qui se passe ici ?!";
     public string textBookWrong = "Aucune réaction...";
     public string textBookRight = "Quelque chose est tombé!";
     public string textBarberChair= "Cette chaise me rappelle un fauteuil de chez mon ami Gely à Pézenas.";

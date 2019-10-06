@@ -19,9 +19,18 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public bool bookValide = true;
 
+    public float timer = 300f;
+
+    public bool timerOn = false;
+
+
+   
+
 
     private void OnEnable()
     {
+        timerOn = false;
+        timer = 300;
         HaveFinalKey = false;
         HaveKeyBarder = false;
         HaveCode = false;
