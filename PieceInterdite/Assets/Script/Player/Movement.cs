@@ -17,43 +17,58 @@ public class Movement : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
+        CursorLock();
+    }
 
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        UpdateMove();
+    }
+
+    private void UpdateMove()
+    {
         direction = Vector3.zero;
-        
-        
+
+
         if (Input.GetKey(KeyCode.Z))
         {
-            direction += transform.forward ;
+            direction += transform.forward;
         }
-         if(Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q))
         {
-            direction += -transform.right ;
+            direction += -transform.right;
         }
-         if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             direction += transform.right;
         }
-         if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            direction += -transform.forward ;
+            direction += -transform.forward;
         }
 
-         if(direction != Vector3.zero )
+        if (direction != Vector3.zero)
         {
-            if(!_audio.isPlaying)
+            if (!_audio.isPlaying)
             {
                 _audio.Play();
             }
-            
+
         }
         else
         {
             _audio.Stop();
         }
         direction.Normalize();
-        rb.velocity = direction * speed * Time.deltaTime;
+        rb.velocity = direction * speed * Time.fixedDeltaTime;
+    }
+
+    public void CursorLock()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

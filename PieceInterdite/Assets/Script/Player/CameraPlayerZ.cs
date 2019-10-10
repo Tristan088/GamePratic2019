@@ -10,7 +10,7 @@ public class CameraPlayerZ : MonoBehaviour
     public float aimAssistCameraSpd = 80.0f;
     public float speed = 10.0f;
     public float CurrentCamSpeed = 110.0f;
-    public float CameraSpeed = 110.0f;
+    public float CameraSpeed = 220.0f;
     public float mousePosx = 0.0f;
     public float mousePosy = 0.0f;
     private Camera cam;
@@ -50,15 +50,7 @@ public class CameraPlayerZ : MonoBehaviour
             CurrentCamSpeed = CameraSpeed;
         }
 
-        if (Input.GetButton("Fire2"))
-        {
-            CameraSpeed = 70.0f;
-        }
-        else
-        {
-            CameraSpeed = 110.0f;
-
-        }
+        
     }
     private void LateUpdate()
     {
