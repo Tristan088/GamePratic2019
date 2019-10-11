@@ -15,19 +15,64 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public bool HaveCode = false;
 
+    public int bookCount = 0;
+
+    public bool bookValide = true;
+
+    public float timer = 300f;
+
+    public bool timerOn = false;
+
+
+   
+
 
     private void OnEnable()
     {
+        ResetPlayer();
+    }
+
+    public void ResetPlayer()
+    {
+        timerOn = false;
+        timer = 300;
         HaveFinalKey = false;
         HaveKeyBarder = false;
         HaveCode = false;
+        bookCount = 0;
+        bookValide = true;
     }
-    
-    
 
 
 
 
+
+
+    public void EventBook(int n)
+    {
+        bookCount++;
+        if (bookCount != n)
+        {
+            bookValide = false;
+        }
+       
+        
+        if (bookCount == 4)
+        {
+            if (bookValide)
+            {
+
+            }
+            else
+            {
+                bookCount = 0;
+                bookValide = true;
+
+            }
+        }
+        return;
+
+    }
 
 
     public void EventTableChestUnlock()
@@ -42,7 +87,7 @@ public class PlayerSettings : SingletonSettings<PlayerSettings>
 
     public void EventFinishGame()
     {
-        Debug.Log("GG");
+        SceneManager.LoadScene(1);
     }
 
 }

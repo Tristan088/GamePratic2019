@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactable : InteractableMother
 {
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         
     }

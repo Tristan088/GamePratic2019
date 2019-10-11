@@ -19,6 +19,7 @@ public class TableChestLock : InteractableMother
                 
                 PlayerSettings.Instance.EventTableChestUnlock();
                 GetText(TextSettings.Instance.textGetFinalKey);
+                gameObject.layer = 0;
             }
             else
             {

@@ -13,13 +13,24 @@ public class TextSettings : SingletonSettings<TextSettings>
     //Syntaxe:  public string *nom_du_text* = "Le texte entre guillemet"
     
 
-    public string textFinalDoorLock = "C'est fermé je ne peu pas m'échaper";
+    public string textFinalDoorLock = "C'est fermé je ne peux pas m'échapper";
+    public string textLevier = "Qu'est ce qui se passe ici ?!";
+    public string textBookWrong = "L'ordre doit avoir une importance...";
+    public string textBookRight = "Quelque chose est tombé!";
     public string textBarberChair= "Cette chaise me rappelle un fauteuil de chez mon ami Gely à Pézenas.";
     public string textBarberKey = "Une clef ? Qu'est-ce qu'elle peut bien ouvrir ?";
+    public string textBook1 = " \"Traité des fardements et Confitures\" 1552";
+    public string textBook2 = " \"Prophétie\" 1555";
+    public string textBook3 = " \"Traité de la Peste\" 1558";
+    public string textBook4 = " \"Testament\" 1566";
+    public string textCodeIsSeen = "4 chiffres? Une date? Un code?";
+    public string textOpenTableLock = "2-0-1-9... ça s'ouvre";
+    public string textTableLockCodeMissing = "Ce bureau est fermé par un code à 4 chiffres";
+    public string textMap = "Montpellier, Pézenas, Béziers... Que de belles représentations en ces lieux";
     public string textTableChestWrong = "La clef ne colle pas";
     public string textTableChestRight = "La clef du fauteuil a marché, J'ai entendu quelque chose s'ouvrir";
     public string textTableChestKeyMissing = "C'est fermé, la clef ne doit pas être loin";
-    public string textGetFinalKey = "C'est surment la clef de la sortie";
+    public string textGetFinalKey = "C'est sûrement la clef de la sortie";
 
 
 
